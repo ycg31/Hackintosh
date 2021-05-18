@@ -5,34 +5,34 @@
 | **Component** | **Model** |
 | ------------- | --------- |
 | CPU | AMD Ryzen 5 5600X @ 3.6GHz OC|
-| Motherboard | Asus TUF Gaming B550M-Plus (WI-FI) |
-| RAM | Crucial 英睿达 DDR4 16GB (2 x 8GB) @3600(OC3800)|
-| Audio Chipset | ALCS-1200A |
-| GPU | DATALAND 迪兰恒进 RX 5500XT 8G |
-| Ethernet | RTL8125 2.5GbE |
-| WiFi & Bluetooth | Intel WiFi 6 AX200 |
-| OPOWER SUPPLY) | PHANTEKS 追风者 Revolt PRO 850W |
-| OS Disk (SATA) | HP S700 128G |
+| 主版 | Asus TUF Gaming B550M-Plus (WI-FI) |
+| 内存 | Crucial 英睿达 DDR4 16GB (2 x 8GB) @3600(OC3800)|
+| 声卡 | ALCS-1200A |
+| 显卡 | DATALAND 迪兰恒进 RX 5500XT 8G |
+| 网卡 | RTL8125 2.5GbE |
+| WiFi蓝牙 | Intel WiFi 6 AX200 |
+| 电源 | PHANTEKS 追风者 Revolt PRO 850W |
+| 系统硬盘 | HP S700 128G |
 
-**macOS version**: 11.3.1  (20E241) 
+**macOS 版本**: 11.3.1  (20E241) 
 
-**OpenCore version**: 0.7.0
+**OpenCore 版本**: 0.7.0
 
-**SMBIOS**:  iMacPro1,1
+**机型**:  iMacPro1,1
 
-## Table of content
- - [Drivers & Kexts](#Drivers-&-Kexts)
- - [How to use](#How-to-use)
- - [BIOS Settings](#BIOS-Settings)
- - [Hardware compatibility](#Hardware-compatibility)
- - [Sleep information](#Sleep-information)
- - [PAT patch information](#PAT-patch-information)
- - [Adobe applications fix](#Adobe-applications-fix)
- - [Virtualization](#Virtualization)
- - [Guides](#Guides)
+## 目录
+ - [驱动和扩展](#驱动和扩展)
+ - [如何使用](#如何使用)
+ - [BIOS设置](#BIOS设置)
+ - [软件适用性](#软件适用性)
+ - [睡眠信息](#睡眠信息)
+ - [PAT补丁信息](#PAT补丁信息)
+ - [Adobe系列软件修复](#Adobe系列软件修复)
+ - [虚拟化](#虚拟化)
+ - [安装向导](#安装向导)
 
  
-## Drivers & Kexts
+## 驱动和扩展
  - [[Bootloader] OpenCore](https://github.com/acidanthera/OpenCorePkg)
  - [[Resources] Picker GUI](https://github.com/acidanthera/OcBinaryData/tree/master/Resources)
  - [[Patch] AMD_Vanilla](https://github.com/AMD-OSX/AMD_Vanilla)
@@ -58,40 +58,44 @@
 
 
 
-## How to use
-  1. Make your USB installer with [**this guide**](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/)
-  2. Clone the repository and paste "BOOT" and "OC" directories into your's pendrive "EFI" folder
-  3. Download [**GenSMBIOS**](https://github.com/corpnewt/GenSMBIOS) to generate unique SMBIOS information. Run it and select **Generate SMBIOS**, as the model select **iMacPro1,1**.
-  4. Open config.plist with [**ProperTree**](https://github.com/corpnewt/ProperTree) and go to PlatformInfo > Generic. Set MLB (Board Serial), SystemSerialNumber (Serial) and SystemUUID (SmUUID) to generated values. Change ROM to your network card's MAC address without the `:` character. [**How to get MAC Address?**](https://www.wikihow.com/Find-the-MAC-Address-of-Your-Computer)
-  5. Update your BIOS to latest version and set it's settings to [**required values**](#BIOS-Settings)
-  6. Read [**information**](#Hardware-compatibility) about required changes for some hardware
-  7. Boot and install it!
-  8. After installation you can copy your EFI directory to disk's EFI partition - then you can boot macOS without pendrive
-  9. If you want to use dual boot you have to enable Bootstrap - it will protect your OpenCore to be overriden by Windows' boot loader. Click [**here**](https://dortania.github.io/OpenCore-Post-Install/multiboot/bootstrap.html) for information about it.
+## 如何使用
+  1. 使用[**本指南**](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/)制作USB安装程序
+  2. 克隆存储库，并将“BOOT”和“OC”目录粘贴到您的引导驱动器“EFI”文件夹中
+  3. 下载 [**GenSMBIOS**](https://github.com/corpnewt/GenSMBIOS)以生成唯一的SMBIOS信息。运行它并选择生成SMBIOS，因为型号选择iMacPro1,1。
+  4. 使用[**ProperTree**](https://github.com/corpnewt/ProperTree)打开config.plist，然后转到PlatformInfo > Generic。将MLB（板串行）、SystemSerialNumber（串行）和SystemUUID（SmUUID）设置为生成的值。将ROM更改为去掉:的网卡MAC地址。[**如何获取MAC地址？**](https://www.wikihow.com/Find-the-MAC-Address-of-Your-Computer)
+  5. 将您的BIOS更新到最新版本，并将其设置设置为[**所需的值**](#BIOS设置)
+  6. 阅读有关某些硬件所需更改的[**信息**](#软件适用性)
+  7. 启动并安装它！
+  8. 安装后，您可以将 EFI 目录复制到磁盘的 EFI 分区 - 然后您可以无需U盘即可启动 macOS
+  9. 如果使用双系统必须开启Bootstrap,他将保护你的Opencore不被Windows的引导覆盖, 点击获取相关信息[**信息**](https://dortania.github.io/OpenCore-Post-Install/multiboot/bootstrap.html)。
+  
+**你不能直接使用本库中的SMBIOS信息,必须自己生成并保持唯一。**
 
-**You CAN NOT use SMBIOS from this repository, it MUST be unique for every macOS installation**
-## BIOS Settings
+## BIOS设置
 
 | **Option** | **Status** |
 | ------------- | --------- |
-| SATA Mode | AHCI |
-| Above 4G Decoding | Enabled <sup>1</sup> |
-| EHCI/XHCI Hand-off | Enabled |
-| SVM | Enabled |
-| CSM | Disabled |
-| Resizable BAR Support | Disabled |
-| Secure Boot | Disabled |
-| Serial Port | Disabled |
-| Parallel Port | Disabled |
+| SATA 模式 | AHCI |
+| Above 4G Decoding | 开启 <sup>1</sup> |
+| EHCI/XHCI Hand-off | 开启 |
+| SVM | 开启 |
+| CSM | 关闭 |
+| Resizable BAR Support | 关闭 |
+| 安全启动 | 关闭 |
+| 串口 | 关闭 |
+| Parallel Port | 关闭 |
 
 
-<sup>1</sup> If you have this option you **MUST** remove `npci=0x2000` from `boot-args` in `config.plist`
+<sup>1</sup> 这里如果开启的话,**必须**在config.plist配置文件的`boot-args`项中删除  `npci=0x2000`,不过推荐主板关闭,使用参数
 
-**Most of these options may not exist in your firmware, just try to match it as closely as possible. Don't be too concerned if many of these options are not available in your BIOS**
+**这些选项大多可能不存在于您的主板bios选项中，只需尽可能接近即可。如果您的BIOS中没有其中许多选项，请不要太担心**
 
-**Before booting macOS remember to update BIOS to latest version**
+**在启动macOS之前，请记住将BIOS更新到最新版本**
 
-## Hardware compatibility
+## 软件适用性
+大多数具有17H和19H（所有Ryzen的世代，Athlon 2xxGE）的CPU与macOS兼容外设的CPU应该可以使用此存储库的EFI工作。
+这里不涵盖对15小时（FX系列）、16小时（A系列）和Threadripper CPU的支持。
+
 Most builds with **17h and 19h (All Ryzen's generations, Athlon 2xxGE)** CPUs with [**macOS compatible peripherals**](https://dortania.github.io/Anti-Hackintosh-Buyers-Guide/CPU.html) should work with EFI from this repository. \
 **Support for 15h (FX series), 16h (A series) and Threadripper CPUs is not covered here.**
 
@@ -114,14 +118,14 @@ Remember to remove `RealtekRTL8111.kext` before use another kext.
 
 By default enabled is PAT patch made by Shaneee - it improves GPU performance but can cause some issues. It can break HDMI audio and make builds with NVIDIA GPU unbootable. You can switch patch with better compatibility (but worse performance). Click [**here**](#PAT-patch-information) for more information.
 
-## Sleep information
+## 睡眠信息
 If you have issues with sleep, firstly you have to map your USB ports. You can read about it [**here**](https://dortania.github.io/OpenCore-Post-Install/usb/). If map does not help, you should try patching USB via SSDT.
 
 In `SSDT-SLEEP.aml` there are patches for _STA method. Patch as applied to `_SB.PCI0.GPP2.PTXH` and `_SB.PCI0.GP17.XHC0` USB controllers, if you have other addresses of USB controllers you have to edit SSDT for your build. Patch is applied only for macOS, so USB on other systems should work normally.
 
 Sleep in AMD systems is often broken by USB issues, but not always. If USB patching does not help read [**this guide**](https://dortania.github.io/OpenCore-Post-Install/universal/sleep.html) about fixing sleep.
 
-## PAT patch information
+## PAT补丁信息
 | **Shaneee's** | **Algrey's** |
 | ------------- | --------- |
 | Much better GPU performance | Worse GPU performance |
@@ -133,13 +137,13 @@ To switch to another patch search for `mtrr_update_action` in `config.plist`. Th
 
 **Don't try to use them both at the same time, it won't work.**
 
-## Adobe applications fix
+## Adobe系列软件修复
 Adobe applications crash on AMD Hackintoshes due to missing intel_fast_memset instructions.
 Run [**this script**](/Resources/Adobe%20patch.sh) or if you prefer to do it manually follow [**this guide**](https://gist.github.com/mikigal/8e1f804fcd7dbafbded2f236653be7c8) to get it working! Remember to reboot your Hackintosh after patching.
 
 If Photoshop crashes while opening image from file you have to downgrade it to version 22.0
 
-## Virtualization
+## 虚拟化
 Firstly you have to enable `SVM` in your BIOS settings. \
 Parallels Desktop (only up to 13.1, newer version require AppleHV) and VirtualBox (it works much worse than Parallels) are only compatible software for virtual machines. There's also VMWare Fusion 10, but it's totally broken on Big Sur, on Catalina it needs [**this workaround**](https://posts.boy.sh/vmware-fusion-catalina) \
 Docker also does not work - you have to use Docker Toolbox instead, but it does not have all Docker's features.
@@ -166,19 +170,18 @@ If [**Coherence Mode**](https://www.parallels.com/blogs/how-to-use-coherence-mod
   - `C:\Program Files (x86)\Parallels\Parallels Tools\Services\coherence.exe`
   - `C:\Program Files (x86)\Parallels\Parallels Tools\Services\prl_hook.dll`
 
-## Guides
-**If you have any problems with installation or booting your macOS, kernel panics or another system related issue check OC configuration guide**
+## 安装向导
+**如果您在安装或启动 macOS 时遇到任何问题、内核崩溃或其他系统相关问题，请查看 OC 配置指南**
 
-**If something else does not work properly (for example USB ports, iServices, DRM/Netflix) check Post-Install guide**
+**如果其他东西不能正常工作（例如USB端口、iServices、DRM/Netflix），请查看安装后指南**
 
- - Creating USB installer: [**\*click\***](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/)
- - OpenCore configuration: [**\*click\***](https://dortania.github.io/OpenCore-Install-Guide/AMD/zen.html)
- - Post-Install: [**\*click\***](https://dortania.github.io/OpenCore-Post-Install/)
- - Troubleshooting: [**\*click\***](https://dortania.github.io/OpenCore-Post-Install/)
- - ACPI patching: [**\*click\***](https://dortania.github.io/Getting-Started-With-ACPI/)
- - USB mapping: [**\*click\***](https://dortania.github.io/OpenCore-Post-Install/usb/)
+ - 创建USB安装程序: [**\*点击\***](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/)
+ - penCore配置: [**\*点击\***](https://dortania.github.io/OpenCore-Install-Guide/AMD/zen.html)
+ - 安装后: [**\*点击\***](https://dortania.github.io/OpenCore-Post-Install/)
+ - 故障诊断: [**\*点击\***](https://dortania.github.io/OpenCore-Post-Install/)
+ - ACPI补丁: [**\*点击\***](https://dortania.github.io/Getting-Started-With-ACPI/)
+ - USB映射: [**\*点击\***](https://dortania.github.io/OpenCore-Post-Install/usb/)
 
-If you have any other questions or issues, feel free to ask on [**AMD-OSX Discord**](https://discord.gg/EfCYAJW) or [**Forum**](https://forum.amd-osx.com)
 
 
 
