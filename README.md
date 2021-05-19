@@ -1,5 +1,6 @@
 # AMD Ryzen Hackintosh - Opencore EFI for Asus TUF Gaming B550M-Plus (WI-FI)
 
+[**English**](README_en.md)| [**中文**](README.md)
 
 ## Specification
 | **Component** | **Model** |
@@ -108,9 +109,6 @@ For **AMD Navi GPUs (RX 5500, 5600, 5700)** you have to add `agdpmod=pikera` to 
 If you experience issues with your audio, then you have to change `alcid` proper for your audio chipset. Find your chipset [**here**](https://github.com/acidanthera/applealc/wiki/supported-codecs) and try setting `alcid` in `boot-args` parameter to every layout-id values from AppleALC wiki until you get correct value (working audio inputs and outputs) for your motherboard.
 
 If you experience issues with network connection, then you probably have another ethernet chipset. Click [**here**](https://dortania.github.io/OpenCore-Install-Guide/ktext.html#ethernet) for information about kexts for ethernet cards. \
-For High Sierra use [**this kext**](https://bitbucket.org/RehabMan/os-x-realtek-network/downloads/) for Realtek 8111 ethernet card, because version from this repository needs Mojave or newer version. \
-If you are using Big Sur with RTL8111 but network is unstable try [**this version**](https://github.com/Mieze/RTL8111_driver_for_OS_X/releases/tag/v2.2.2) of kext. \
-Remember to remove `RealtekRTL8111.kext` before use another kext.
 
 By default enabled is PAT patch made by Shaneee - it improves GPU performance but can cause some issues. It can break HDMI audio and make builds with NVIDIA GPU unbootable. You can switch patch with better compatibility (but worse performance). Click [**here**](#PAT-patch-information) for more information.
 
@@ -177,8 +175,6 @@ If [**Coherence Mode**](https://www.parallels.com/blogs/how-to-use-coherence-mod
  - Troubleshooting: [**\*click\***](https://dortania.github.io/OpenCore-Post-Install/)
  - ACPI patching: [**\*click\***](https://dortania.github.io/Getting-Started-With-ACPI/)
  - USB mapping: [**\*click\***](https://dortania.github.io/OpenCore-Post-Install/usb/)
-
-If you have any other questions or issues, feel free to ask on [**AMD-OSX Discord**](https://discord.gg/EfCYAJW) or [**Forum**](https://forum.amd-osx.com)
 
 
 
