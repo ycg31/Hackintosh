@@ -21,7 +21,7 @@
 **SMBIOS**:  iMacPro1,1
 
 ## Table of content
- - [Drivers & Kexts](#Drivers-&-Kexts)
+ - [Drivers & Kexts](#Drivers-and-Kexts)
  - [How to use](#How-to-use)
  - [BIOS Settings](#BIOS-Settings)
  - [Hardware compatibility](#Hardware-compatibility)
@@ -32,7 +32,7 @@
  - [Guides](#Guides)
 
  
-## Drivers & Kexts
+## Drivers and Kexts
  - [[Bootloader] OpenCore](https://github.com/acidanthera/OpenCorePkg)
  - [[Resources] Picker GUI](https://github.com/acidanthera/OcBinaryData/tree/master/Resources)
  - [[Patch] AMD_Vanilla](https://github.com/AMD-OSX/AMD_Vanilla)
