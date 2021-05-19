@@ -93,80 +93,86 @@
 **在启动macOS之前，请记住将BIOS更新到最新版本**
 
 ## 软件适用性
-大多数具有17H和19H（所有Ryzen的世代，Athlon 2xxGE）的CPU与macOS兼容外设的CPU应该可以使用此存储库的EFI工作。
-这里不涵盖对15小时（FX系列）、16小时（A系列）和Threadripper CPU的支持。
+适用于大多数具有17h和19h的AMD CPU （所有Ryzen系列和Athlon 2xxGE。
+不适用于15h（FX系列）、16h（A系列）和Threadripper CPU。
 
-Most builds with **17h and 19h (All Ryzen's generations, Athlon 2xxGE)** CPUs with [**macOS compatible peripherals**](https://dortania.github.io/Anti-Hackintosh-Buyers-Guide/CPU.html) should work with EFI from this repository. \
-**Support for 15h (FX series), 16h (A series) and Threadripper CPUs is not covered here.**
+详情见[**支持列表**](https://dortania.github.io/Anti-Hackintosh-Buyers-Guide/CPU.html) \
 
-Integrated GPUs **DO NOT WORK**, for NVIDIA check details [**here**](https://dortania.github.io/GPU-Buyers-Guide/modern-gpus/nvidia-gpu.html) (it's not covered in this repository). \
-If you have **NVIDIA GPU** you may have to change PAT Patch to Algrey's version, read [**here**](#PAT-patch-information) about it
+**集成显卡不能正常工作**，NVIDIA显卡具体看[**这里**](https://dortania.github.io/GPU-Buyers-Guide/modern-gpus/nvidia-gpu.html) (it's not covered in this repository). \
 
-Motherboards with **B550 and A520** chipsets require additional **SSDT-CPUR** to boot macOS. \
-You have to [**download it**](https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-CPUR.aml) and put it under `OC/ACPI` directory. Then you have to add it to your config. Open it with ProperTree or your favourite text editor and add it under `ACPI -> Add`. You should do this in the same way as you did `SSDT-EC-USBX-DESKTOP`, just change the name of the file.
+如果你是N卡用户，你可能需要选择Algrey版本的PAT补丁，具体看[**这里**](#PAT补丁信息)
 
-For **B550, A520 and B450, X470, X570 with newer BIOS versions** `SetupVirtualMap` must be disabled. Go to `Booter -> Quirks -> SetupVirtualMap` in your config and change it to `false`
+**B550和A520主板**需要添加**SSDT-CPUR**这个ACPI补丁才能正常启动。\
+[**下载地址**](https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-CPUR.aml) \
+下载后放到`OC/ACPI` 目录下，并在配置文件config.plist中启用。
 
-For **AMD Navi GPUs (RX 5500, 5600, 5700)** you have to add `agdpmod=pikera` to `boot-args` to fix black screen issue.
+**B550, A520主板以及使用最新bios版本的B450, X470, X570主板** 必须将config中`SetupVirtualMap` 禁用。具体路劲为 `Booter -> Quirks -> SetupVirtualMap` ，将值改为 `false`
 
-If you experience issues with your audio, then you have to change `alcid` proper for your audio chipset. Find your chipset [**here**](https://github.com/acidanthera/applealc/wiki/supported-codecs) and try setting `alcid` in `boot-args` parameter to every layout-id values from AppleALC wiki until you get correct value (working audio inputs and outputs) for your motherboard.
+**AMD Navi 显卡 (比如RX 5500, 5600, 5700)** 应在启动参数`boot-args` 中添加 `agdpmod=pikera` 以修复黑屏错误。
 
-If you experience issues with network connection, then you probably have another ethernet chipset. Click [**here**](https://dortania.github.io/OpenCore-Install-Guide/ktext.html#ethernet) for information about kexts for ethernet cards. \
-For High Sierra use [**this kext**](https://bitbucket.org/RehabMan/os-x-realtek-network/downloads/) for Realtek 8111 ethernet card, because version from this repository needs Mojave or newer version. \
-If you are using Big Sur with RTL8111 but network is unstable try [**this version**](https://github.com/Mieze/RTL8111_driver_for_OS_X/releases/tag/v2.2.2) of kext. \
-Remember to remove `RealtekRTL8111.kext` before use another kext.
+如果你的声卡有问题，你必须改变`alcid`的值来适配你的主板，具体见[**这里**](https://github.com/acidanthera/applealc/wiki/supported-codecs) 。你可以尝试不同的layout-id值，直到你声卡正常工作。
 
-By default enabled is PAT patch made by Shaneee - it improves GPU performance but can cause some issues. It can break HDMI audio and make builds with NVIDIA GPU unbootable. You can switch patch with better compatibility (but worse performance). Click [**here**](#PAT-patch-information) for more information.
+如果你有网络连接问题，可能是网卡驱动不适合，请按手册查找自己主板的网卡驱动，[**详见这里**](https://dortania.github.io/OpenCore-Install-Guide/ktext.html#ethernet)  \
+
+PAT补丁默认启用的是Shaneee版本，可以提供显卡的性能，但同时也会带来一些兼容性的问题，如果兼容性有问题，请切换到另一个PAT补丁，具体信息见[**PAT补丁信息**](#PAT补丁信息)
 
 ## 睡眠信息
-If you have issues with sleep, firstly you have to map your USB ports. You can read about it [**here**](https://dortania.github.io/OpenCore-Post-Install/usb/). If map does not help, you should try patching USB via SSDT.
 
-In `SSDT-SLEEP.aml` there are patches for _STA method. Patch as applied to `_SB.PCI0.GPP2.PTXH` and `_SB.PCI0.GP17.XHC0` USB controllers, if you have other addresses of USB controllers you have to edit SSDT for your build. Patch is applied only for macOS, so USB on other systems should work normally.
+如果你有睡眠问题，首先请定制你的USB端口，定制方法 [**参考这里**](https://dortania.github.io/OpenCore-Post-Install/usb/)，如果定制USB仍然存在问题，你应该尝试通过SSDT来修复USB。
 
-Sleep in AMD systems is often broken by USB issues, but not always. If USB patching does not help read [**this guide**](https://dortania.github.io/OpenCore-Post-Install/universal/sleep.html) about fixing sleep.
+在SSDT-SLEEP.aml中有用于修补_STA方法的补丁。补丁适用于_SB.PCI0.GPP2.PTXH和_SB.PCI0.GP17.XHC0USB控制器，如果你的USB控制器还有其他地址，你必须在SSDT添加。补丁程序仅适用于macOS，因此其他系统上的USB不受此补丁的影响。
+
+睡眠问题总是由于USB引起的，但也不是肯定就是USB的问题，如果USB补丁无效的话，参考[**这篇文章**](https://dortania.github.io/OpenCore-Post-Install/universal/sleep.html) 来修复睡眠。
 
 ## PAT补丁信息
 | **Shaneee's** | **Algrey's** |
 | ------------- | --------- |
-| Much better GPU performance | Worse GPU performance |
-| May not work with NVIDIA GPUs | Compatible with all GPUs |
-| HDMI/DP audio may not work | HDMI/DP audio works |
-| Enabled by default | Disabled by default |
+| 更好的GPU性能 | 更差的GPU性能 |
+| 可能不适用于NVIDIA GPU | 与所有GPU兼容 |
+| HDMI / DP音频可能不起作用 | HDMI/DP 音频正常工作 |
+| 默认启用 | 	默认禁用 |
 
-To switch to another patch search for `mtrr_update_action` in `config.plist`. Then set `Enabled` to `true` for patch which you want to use. Remember to set `Enabled` to `false` for second PAT patch.
 
-**Don't try to use them both at the same time, it won't work.**
+要切换到另一个补丁，请在config.plist中搜索mtrr_update_action。然后要使用的补丁Enable设置成TRUE，另一个设置成FALSE。
+
+不要尝试同时两个补丁，必须禁用一个。
+
 
 ## Adobe系列软件修复
-Adobe applications crash on AMD Hackintoshes due to missing intel_fast_memset instructions.
-Run [**this script**](/Resources/Adobe%20patch.sh) or if you prefer to do it manually follow [**this guide**](https://gist.github.com/mikigal/8e1f804fcd7dbafbded2f236653be7c8) to get it working! Remember to reboot your Hackintosh after patching.
 
-If Photoshop crashes while opening image from file you have to downgrade it to version 22.0
+由于缺少intel_fast_memset指令，Adobe应用程序在AMD黑苹果上会崩溃。你可以运行[**这个脚本**](/Resources/Adobe%20patch.sh)来解决，或者按照[**这篇教程**](https://gist.github.com/mikigal/8e1f804fcd7dbafbded2f236653be7c8)来手动修复！切记修补后重启系统。
+
+如果从文件中打开图像时Photoshop崩溃，则必须将其降级到22.0版
 
 ## 虚拟化
-Firstly you have to enable `SVM` in your BIOS settings. \
-Parallels Desktop (only up to 13.1, newer version require AppleHV) and VirtualBox (it works much worse than Parallels) are only compatible software for virtual machines. There's also VMWare Fusion 10, but it's totally broken on Big Sur, on Catalina it needs [**this workaround**](https://posts.boy.sh/vmware-fusion-catalina) \
-Docker also does not work - you have to use Docker Toolbox instead, but it does not have all Docker's features.
 
-On Big Sur (11.0) Parallel's won't start - it will show `Required components are missing from the OS` error due to changed versions number schema. You have to run installer from with `SYSTEM_VERSION_COMPAT=1` parameter. \
-Open your Terminal app and run Parallel's installer like this: `SYSTEM_VERSION_COMPAT=1 open /Volumes/Parallels\ Desktop\ 13.1.0/Install.app/`, just replace volume's name to proper for your Parallel's DMG. \
-Same problem will exist while trying to start installed Parallels - you can run it every time with the same way as installer or use my launcher (it simply starts Parallels with required parameter) - you can get it [**here**](/Resources/Parallels%20Desktop%20Launcher.app.zip)
+首先，您必须在BIOS设置中启用`SVM`。
+Parallels Desktop（仅适用于13.1，更高版本需要AppleHV）和VirtualBox（其工作原理比Parallels差得多）这两款虚拟化软件支持。
+VMWare Fusion 10在Big Sur上不能使用，在Catalina上，它需要这种[**解决方法**](https://posts.boy.sh/vmware-fusion-catalina) \
+Docker也无法正常工作。您必须使用Docker Toolbox，但是它不具备Docker的所有功能。
 
-Parallels 13.1 support only Windows 10 Anniversary Update (build 1607) and older versions. Newer versions stuck while installing. Also I recommend using Windows 7 - it works much better. Do not use automatical installation feature - it caused some issue for me.
 
-**DO NOT** add too much resources to virtual machines, it causes performance issues independently of host specification. \
-I tested lot of VM configurations - the best performance results gives:
-  - Parallels Desktop 13.1
-  - 4 CPU cores
-  - 4GB RAM
-  - 1GB VRAM
-  - 3D Acceleration: DirectX 9
-  - OS: Windows 7 (SP1, build 7601) with disabled Aero theme
 
-With above configuration system is generally responsive, it runs simple games (e. g. The Binding of Isaac: Repentace) smoothly too. All Parallels host-integration features works great.
+在Big Sur (11.0)上 Parallel无法正常启动，会提示 `Required components are missing from the OS` 错误。你必须在安装时添加`SYSTEM_VERSION_COMPAT=1` 参数。 \
+在终端中运行如下命令: `SYSTEM_VERSION_COMPAT=1 open /Volumes/Parallels\ Desktop\ 13.1.0/Install.app/`, 将路径替换成Parallel安装文件所在路径 \
 
-If guest OS does not see USB device reconnecting it to another port usually solve this issue. \
-If [**Coherence Mode**](https://www.parallels.com/blogs/how-to-use-coherence-mode-in-parallels-desktop/) does not work you have to disable guest's antivirus or add these files to it's exclusions list:
+安装完成后启动Parallels时也会出现同样的错误，你可以每次启动时添加同样的参数，也可以使用大神制作的启动器，[**下载地址**](/Resources/Parallels%20Desktop%20Launcher.app.zip)
+
+Parallels 13.1仅支持Windows10 1607版本以及更老的版本。较新的版本在安装时会卡住。建议使用Windows 7，效果会更好。不要使用自动安装功能。
+
+不要向虚拟机添加太多资源，会导致性能问题。
+我测试了许多VM配置-最佳性能结果如下：
+
+Parallels Desktop 13.1
+4个CPU核心
+4GB内存
+1GB VRAM
+3D加速：DirectX 9
+操作系统：禁用Aero主题的Windows 7（SP1，内部版本7601）
+
+如果虚拟机操作系统看不到USB设备将其重新连接到另一个端口，则通常可以解决此问题。
+如果[**Coherence 模式**](https://www.parallels.com/blogs/how-to-use-coherence-mode-in-parallels-desktop/)不起作用，则必须禁用虚拟机的防病毒软件或将以下文件添加到其排除列表中：
+
   - `C:\Program Files (x86)\Parallels\Parallels Tools\Services\coherence.exe`
   - `C:\Program Files (x86)\Parallels\Parallels Tools\Services\prl_hook.dll`
 
