@@ -25,7 +25,7 @@
  - [驱动和扩展](#驱动和扩展)
  - [如何使用](#如何使用)
  - [BIOS设置](#BIOS设置)
- - [软件适用性](#软件适用性)
+ - [适用](#适用)
  - [睡眠信息](#睡眠信息)
  - [PAT补丁信息](#PAT补丁信息)
  - [Adobe系列软件修复](#Adobe系列软件修复)
@@ -93,18 +93,17 @@
 
 **在启动macOS之前，请记住将BIOS更新到最新版本**
 
-## 软件适用性
-适用于大多数具有17h和19h的AMD CPU （所有Ryzen系列和Athlon 2xxGE。
+## 适用
+适用于大多数具有17h和19h的AMD CPU, 所有Ryzen系列和Athlon 2xxGE。
 不适用于15h（FX系列）、16h（A系列）和Threadripper CPU。
 
-详情见[**支持列表**](https://dortania.github.io/Anti-Hackintosh-Buyers-Guide/CPU.html) \
+详情见[**支持列表**](https://dortania.github.io/Anti-Hackintosh-Buyers-Guide/CPU.html) 
 
-**集成显卡不能正常工作**，NVIDIA显卡具体看[**这里**](https://dortania.github.io/GPU-Buyers-Guide/modern-gpus/nvidia-gpu.html) (it's not covered in this repository). \
+**集成显卡不能正常工作**，NVIDIA显卡具体看[**这里**](https://dortania.github.io/GPU-Buyers-Guide/modern-gpus/nvidia-gpu.html)
 
 如果你是N卡用户，你可能需要选择Algrey版本的PAT补丁，具体看[**这里**](#PAT补丁信息)
 
-**B550和A520主板**需要添加**SSDT-CPUR**这个ACPI补丁才能正常启动。\
-[**下载地址**](https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-CPUR.aml) \
+**B550和A520主板**需要添加**SSDT-CPUR**这个ACPI补丁才能正常启动。[**下载地址**](https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-CPUR.aml) \
 下载后放到`OC/ACPI` 目录下，并在配置文件config.plist中启用。
 
 **B550, A520主板以及使用最新bios版本的B450, X470, X570主板** 必须将config中`SetupVirtualMap` 禁用。具体路劲为 `Booter -> Quirks -> SetupVirtualMap` ，将值改为 `false`
@@ -113,7 +112,7 @@
 
 如果你的声卡有问题，你必须改变`alcid`的值来适配你的主板，具体见[**这里**](https://github.com/acidanthera/applealc/wiki/supported-codecs) 。你可以尝试不同的layout-id值，直到你声卡正常工作。
 
-如果你有网络连接问题，可能是网卡驱动不适合，请按手册查找自己主板的网卡驱动，[**详见这里**](https://dortania.github.io/OpenCore-Install-Guide/ktext.html#ethernet)  \
+如果你有网络连接问题，可能是网卡驱动不适合，请按手册查找自己主板的网卡驱动，[**详见这里**](https://dortania.github.io/OpenCore-Install-Guide/ktext.html#ethernet) 
 
 PAT补丁默认启用的是Shaneee版本，可以提供显卡的性能，但同时也会带来一些兼容性的问题，如果兼容性有问题，请切换到另一个PAT补丁，具体信息见[**PAT补丁信息**](#PAT补丁信息)
 
