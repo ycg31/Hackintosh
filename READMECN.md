@@ -1,8 +1,5 @@
 # AMD Ryzen Hackintosh - Opencore EFI for Asus TUF Gaming B550M-Plus (WI-FI)
 
-[![Build Status](https://github.com/daliansky/XiaoMi-Pro-Hackintosh/workflows/CI/badge.svg)](https://github.com/daliansky/XiaoMi-Pro-Hackintosh/actions) [![Release](https://img.shields.io/github/v/release/daliansky/XiaoMi-Pro-Hackintosh?label=download)](https://github.com/daliansky/XiaoMi-Pro-Hackintosh/releases/latest) [![Wiki](https://img.shields.io/badge/support-Wiki-green.svg)](https://github.com/daliansky/XiaoMi-Pro-Hackintosh/wiki) [![Chat](https://img.shields.io/badge/chat-Discussions-orange.svg)](https://github.com/daliansky/XiaoMi-Pro-Hackintosh/discussions)
------
-
 [**English**](README.md)| [**中文**](READMECN.md)
 
 ## Specification
