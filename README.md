@@ -1,6 +1,6 @@
 # AMD Ryzen Hackintosh - Opencore EFI for Asus TUF Gaming B550M-Plus (WI-FI)
 
-[**English**](README.md)| [**中文**](READMECN.md)
+[**English**](README_en.md)| [**中文**](README.md)
 
 ## Specification
 | **Component** | **Model** |
