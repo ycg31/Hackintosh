@@ -54,6 +54,7 @@
  - [[Kext] SMCAMDProcessor](https://github.com/trulyspinach/SMCAMDProcessor)
  - [[Kext] NVMeFix](https://github.com/acidanthera/NVMeFix)
  - [[Kext] RestrictEvents](https://github.com/acidanthera/RestrictEvents)
+ - [[Kext] Innie](https://github.com/cdf/Innie/releases)
  - [[SSDT] EC-USBX-DESKTOP](https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-EC-USBX-DESKTOP.aml)
  - [[SSDT] SLEEP-PTXH](./OC/ACPI/SSDT-SLEEP-PTXH.aml)
 
