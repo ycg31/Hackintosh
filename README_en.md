@@ -7,12 +7,12 @@
 | ------------- | --------- |
 | CPU | AMD Ryzen 5 5600X @ 3.6GHz OC|
 | Motherboard | Asus TUF Gaming B550M-Plus (WI-FI) |
-| RAM | Crucial 英睿达 DDR4 16GB (2 x 8GB) @3600(OC3800)|
+| RAM | Crucial  DDR4 16GB (2 x 8GB) @3600(OC3800)|
 | Audio Chipset | ALCS-1200A |
-| GPU | DATALAND 迪兰恒进 RX 5500XT 8G |
+| GPU | DATALAND  RX 5500XT 8G |
 | Ethernet | RTL8125 2.5GbE |
 | WiFi & Bluetooth | Intel WiFi 6 AX200 |
-| OPOWER SUPPLY) | PHANTEKS 追风者 Revolt PRO 850W |
+| OPOWER SUPPLY) | PHANTEKS  Revolt PRO 850W |
 | OS Disk (SATA) | HP S700 128G |
 
 **macOS version**: 11.3.1  (20E241) 

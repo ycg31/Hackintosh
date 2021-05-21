@@ -1,19 +1,19 @@
-# AMD Ryzen Hackintosh - Opencore EFI for Asus TUF Gaming B550M-Plus (WI-FI)
+# 锐龙黑苹果 - 华硕电竞特工B550M(WIFI版)Opencore引导文件
 
 [**English**](README_en.md)| [**中文**](README.md)
 
-## Specification
-| **Component** | **Model** |
+## 硬件配置
+| **组件** | **型号** |
 | ------------- | --------- |
-| CPU | AMD Ryzen 5 5600X @ 3.6GHz OC|
-| 主版 | Asus TUF Gaming B550M-Plus (WI-FI) |
-| 内存 | Crucial 英睿达 DDR4 16GB (2 x 8GB) @3600(OC3800)|
-| 声卡 | ALCS-1200A |
-| 显卡 | DATALAND 迪兰恒进 RX 5500XT 8G |
-| 网卡 | RTL8125 2.5GbE |
-| WiFi蓝牙 | Intel WiFi 6 AX200 |
-| 电源 | PHANTEKS 追风者 Revolt PRO 850W |
-| 系统硬盘 | HP S700 128G |
+| CPU | AMD 锐龙5 5600X @ 3.6GHz OC|
+| 主版 | 华硕 电竞特工 TUF Gaming B550M-Plus (WI-FI) |
+| 内存 | 英睿达 DDR4 16GB (2 x 8GB) @3600(OC3800)|
+| 声卡 | 瑞昱 ALCS-1200A |
+| 显卡 | 迪兰恒进 RX 5500XT 8G |
+| 网卡 | 瑞昱 RTL8125 2.5GbE |
+| WiFi蓝牙 | 英特尔 WiFi 6 AX200 |
+| 电源 | 追风者 Revolt PRO 850W |
+| 系统硬盘 | 惠普 S700 128G |
 
 **macOS 版本**: 11.3.1  (20E241) 
 
@@ -34,27 +34,27 @@
 
  
 ## 驱动和扩展
- - [[Bootloader] OpenCore](https://github.com/acidanthera/OpenCorePkg)
- - [[Resources] Picker GUI](https://github.com/acidanthera/OcBinaryData/tree/master/Resources)
- - [[Patch] AMD_Vanilla](https://github.com/AMD-OSX/AMD_Vanilla)
- - [[Driver] FwRuntimeServices](https://github.com/acidanthera/OpenCorePkg)
- - [[Driver] HfsPlus](https://github.com/acidanthera/OcBinaryData/blob/master/Drivers/HfsPlus.efi)
- - [[Driver] OpenHfsPlus](https://github.com/acidanthera/OpenCorePkg)
- - [[Driver] OpenRuntime](https://github.com/acidanthera/OpenCorePkg)
- - [[Driver] OpenCanopy](https://github.com/acidanthera/OpenCorePkg)
- - [[Kext] Lilu](https://github.com/acidanthera/Lilu)
- - [[Kext] VirtualSMC](https://github.com/acidanthera/VirtualSMC)
- - [[Kext] WhateverGreen](https://github.com/acidanthera/WhateverGreen)
- - [[Kext] AppleALC 声卡驱动](https://github.com/acidanthera/AppleALC)
- - [[Kext] AppleMCEReporterDisabler 关闭AppleMCERReport](https://github.com/AMD-OSX/AMD_Vanilla/blob/opencore/Extra/AppleMCEReporterDisabler.kext.zip)
- - [[Kext] LucyRTL8125Ethernet 2.5G有线网卡驱动](https://github.com/Mieze/LucyRTL8125Ethernet)
- - [[Kext] itlwm Intel AX200 无线网卡驱动](https://github.com/OpenIntelWireless/itlwm)
- - [[Kext] IntelBluetoothFirmware Intel 蓝牙驱动](https://github.com/OpenIntelWireless/IntelBluetoothFirmware)
- - [[Kext] AMDRyzenCPUPowerManagement](https://github.com/trulyspinach/SMCAMDProcessor)
- - [[Kext] SMCAMDProcessor](https://github.com/trulyspinach/SMCAMDProcessor)
- - [[Kext] NVMeFix](https://github.com/acidanthera/NVMeFix)
- - [[Kext] RestrictEvents](https://github.com/acidanthera/RestrictEvents)
- - [[Kext] Innie](https://github.com/cdf/Innie/releases)
+ - [[引导] OpenCore](https://github.com/acidanthera/OpenCorePkg)
+ - [[资源] Picker GUI](https://github.com/acidanthera/OcBinaryData/tree/master/Resources)
+ - [[补丁] AMD_Vanilla](https://github.com/AMD-OSX/AMD_Vanilla)
+ - [[驱动] FwRuntimeServices](https://github.com/acidanthera/OpenCorePkg)
+ - [[驱动] HfsPlus](https://github.com/acidanthera/OcBinaryData/blob/master/Drivers/HfsPlus.efi)
+ - [[驱动] OpenHfsPlus](https://github.com/acidanthera/OpenCorePkg)
+ - [[驱动] OpenRuntime](https://github.com/acidanthera/OpenCorePkg)
+ - [[驱动] OpenCanopy](https://github.com/acidanthera/OpenCorePkg)
+ - [[扩展] Lilu](https://github.com/acidanthera/Lilu)
+ - [[扩展] VirtualSMC](https://github.com/acidanthera/VirtualSMC)
+ - [[扩展] WhateverGreen](https://github.com/acidanthera/WhateverGreen)
+ - [[扩展] AppleALC 声卡驱动](https://github.com/acidanthera/AppleALC)
+ - [[扩展] AppleMCEReporterDisabler 关闭AppleMCERReport](https://github.com/AMD-OSX/AMD_Vanilla/blob/opencore/Extra/AppleMCEReporterDisabler.kext.zip)
+ - [[扩展] LucyRTL8125Ethernet 2.5G有线网卡驱动](https://github.com/Mieze/LucyRTL8125Ethernet)
+ - [[扩展] itlwm Intel AX200 无线网卡驱动](https://github.com/OpenIntelWireless/itlwm)
+ - [[扩展] IntelBluetoothFirmware Intel 蓝牙驱动](https://github.com/OpenIntelWireless/IntelBluetoothFirmware)
+ - [[扩展] AMDRyzenCPUPowerManagement](https://github.com/trulyspinach/SMCAMDProcessor)
+ - [[扩展] SMCAMDProcessor](https://github.com/trulyspinach/SMCAMDProcessor)
+ - [[扩展] NVMeFix](https://github.com/acidanthera/NVMeFix)
+ - [[扩展] RestrictEvents](https://github.com/acidanthera/RestrictEvents)
+ - [[扩展] Innie](https://github.com/cdf/Innie/releases)
  - [[SSDT] EC-USBX-DESKTOP](https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-EC-USBX-DESKTOP.aml)
  - [[SSDT] SLEEP-PTXH](./OC/ACPI/SSDT-SLEEP-PTXH.aml)
 
@@ -183,7 +183,7 @@ Parallels Desktop 13.1
 **如果其他东西不能正常工作（例如USB端口、iServices、DRM/Netflix），请查看安装后指南**
 
  - 创建USB安装程序: [**\*点击\***](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/)
- - penCore配置: [**\*点击\***](https://dortania.github.io/OpenCore-Install-Guide/AMD/zen.html)
+ - OpenCore配置: [**\*点击\***](https://dortania.github.io/OpenCore-Install-Guide/AMD/zen.html)
  - 安装后: [**\*点击\***](https://dortania.github.io/OpenCore-Post-Install/)
  - 故障诊断: [**\*点击\***](https://dortania.github.io/OpenCore-Post-Install/)
  - ACPI补丁: [**\*点击\***](https://dortania.github.io/Getting-Started-With-ACPI/)
