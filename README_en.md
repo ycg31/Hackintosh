@@ -15,9 +15,9 @@
 | OPOWER SUPPLY) | PHANTEKS  Revolt PRO 850W |
 | OS Disk (SATA) | HP S700 128G |
 
-**macOS version**: 11.3.1  (20E241) 
+**macOS version**: 12.0.1  (21A559) 
 
-**OpenCore version**: 0.7.0
+**OpenCore version**: 0.7.6
 
 **SMBIOS**:  iMacPro1,1
 
@@ -46,7 +46,7 @@
  - [[Kext] VirtualSMC](https://github.com/acidanthera/VirtualSMC)
  - [[Kext] WhateverGreen](https://github.com/acidanthera/WhateverGreen)
  - [[Kext] AppleALC 声卡驱动](https://github.com/acidanthera/AppleALC)
- - [[Kext] AppleMCEReporterDisabler 关闭AppleMCERReport](https://github.com/AMD-OSX/AMD_Vanilla/blob/opencore/Extra/AppleMCEReporterDisabler.kext.zip)
+ - [[Kext] AppleMCEReporterDisabler 关闭AppleMCERReport](https://github.com/AMD-OSX/AMD_Vanilla/raw/master/Extra/AppleMCEReporterDisabler.kext.zip)
  - [[Kext] LucyRTL8125Ethernet 2.5G有线网卡驱动](https://github.com/Mieze/LucyRTL8125Ethernet)
  - [[Kext] itlwm Intel AX200 无线网卡驱动](https://github.com/OpenIntelWireless/itlwm)
  - [[Kext] IntelBluetoothFirmware Intel 蓝牙驱动](https://github.com/OpenIntelWireless/IntelBluetoothFirmware)
@@ -85,6 +85,7 @@
 | Secure Boot | Disabled |
 | Serial Port | Disabled |
 | Parallel Port | Disabled |
+| TPM Device | Disabled |
 
 
 <sup>1</sup> If you have this option you **MUST** remove `npci=0x2000` from `boot-args` in `config.plist`

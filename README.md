@@ -15,9 +15,9 @@
 | 电源 | 追风者 Revolt PRO 850W |
 | 系统硬盘 | 惠普 S700 128G |
 
-**macOS 版本**: 11.3.1  (20E241) 
+**macOS 版本**: 12.0.1  (21A559) 
 
-**OpenCore 版本**: 0.7.0
+**OpenCore 版本**: 0.7.6
 
 **机型**:  iMacPro1,1
 
@@ -46,7 +46,7 @@
  - [[扩展] VirtualSMC](https://github.com/acidanthera/VirtualSMC)
  - [[扩展] WhateverGreen](https://github.com/acidanthera/WhateverGreen)
  - [[扩展] AppleALC 声卡驱动](https://github.com/acidanthera/AppleALC)
- - [[扩展] AppleMCEReporterDisabler 关闭AppleMCERReport](https://github.com/AMD-OSX/AMD_Vanilla/blob/opencore/Extra/AppleMCEReporterDisabler.kext.zip)
+ - [[扩展] AppleMCEReporterDisabler 关闭AppleMCERReport](https://github.com/AMD-OSX/AMD_Vanilla/raw/master/Extra/AppleMCEReporterDisabler.kext.zip)
  - [[扩展] LucyRTL8125Ethernet 2.5G有线网卡驱动](https://github.com/Mieze/LucyRTL8125Ethernet)
  - [[扩展] itlwm Intel AX200 无线网卡驱动](https://github.com/OpenIntelWireless/itlwm)
  - [[扩展] IntelBluetoothFirmware Intel 蓝牙驱动](https://github.com/OpenIntelWireless/IntelBluetoothFirmware)
@@ -70,6 +70,12 @@
   7. 启动并安装它！
   8. 安装后，您可以将 EFI 目录复制到磁盘的 EFI 分区 - 然后您可以无需U盘即可启动 macOS
   9. 如果使用双系统必须开启Bootstrap,他将保护你的Opencore不被Windows的引导覆盖, 点击获取相关信息[**信息**](https://dortania.github.io/OpenCore-Post-Install/multiboot/bootstrap.html)。
+
+  如果无法正常启动,检查:
+  1. kernel > Quirks中ProvideCurrentCpuInfo是否设置为True.(必须启用,否则无法启动).
+  2. Misc -> Security -> SecureBootModel是否为Disabled
+  3. kernel > Patch 中 algrey - Force cpuid_cores_per_package 是否已经按CPU核心数进行更改,具体方法见[AMD_Vanilla
+](https://github.com/AMD-OSX/AMD_Vanilla).
   
 **你不能直接使用本库中的SMBIOS信息,必须自己生成并保持唯一。**
 
@@ -86,6 +92,7 @@
 | 安全启动 | 关闭 |
 | 串口 | 关闭 |
 | Parallel Port | 关闭 |
+| TPM Device | 关闭 |
 
 
 <sup>1</sup> 这里如果开启的话,**必须**在config.plist配置文件的`boot-args`项中删除  `npci=0x2000`,不过推荐主板关闭,使用参数
