@@ -22,7 +22,7 @@
 **机型**:  iMacPro1,1
 
 ## 目录
- - [更新日志] (#更新日志)
+ - [更新日志](#更新日志)
  - [驱动和扩展](#驱动和扩展)
  - [如何使用](#如何使用)
  - [BIOS设置](#BIOS设置)
@@ -40,7 +40,7 @@
   3. 修复蓝牙问题导致启动在ALUC卡住启动慢的问题。
   4. 修复HP SSD未开启Trim 系统卡顿的问题。
  
- 
+
 ## 驱动和扩展
  - [[引导] OpenCore](https://github.com/acidanthera/OpenCorePkg)
  - [[资源] Picker GUI](https://github.com/acidanthera/OcBinaryData/tree/master/Resources)
