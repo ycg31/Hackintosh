@@ -15,7 +15,7 @@
 | OPOWER SUPPLY) | PHANTEKS  Revolt PRO 850W |
 | OS Disk (SATA) | HP S700 128G |
 
-**macOS version**: 12.0.1  (21A559) 
+**macOS version**: 12.1  (21C52) 
 
 **OpenCore version**: 0.7.6
 
