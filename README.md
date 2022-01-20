@@ -1,4 +1,4 @@
-# 锐龙黑苹果 - 华硕电竞特工B550M(WIFI版)Opencore引导文件
+# 锐龙黑苹果 - 华硕电竞特工B550M Opencore引导文件
 
 [**English**](README_en.md)| [**中文**](README.md)
 
@@ -6,12 +6,12 @@
 | **组件** | **型号** |
 | ------------- | --------- |
 | CPU | AMD 锐龙5 5600X @ 3.6GHz OC|
-| 主版 | 华硕 电竞特工 TUF Gaming B550M-Plus (WI-FI) |
+| 主版 | 华硕 电竞特工 TUF Gaming B550M-Plus |
 | 内存 | 英睿达 DDR4 16GB (2 x 8GB) @3600(OC3800)|
 | 声卡 | 瑞昱 ALCS-1200A |
 | 显卡 | 迪兰恒进 RX 5500XT 8G |
 | 网卡 | 瑞昱 RTL8125 2.5GbE |
-| WiFi蓝牙 | 英特尔 WiFi 6 AX200 |
+| WiFi蓝牙 | 博通 BMC94360CD |
 | 电源 | 追风者 Revolt PRO 850W |
 | 系统硬盘 | 惠普 S700 128G |
 
@@ -56,8 +56,6 @@
  - [[扩展] AppleALC 声卡驱动](https://github.com/acidanthera/AppleALC)
  - [[扩展] AppleMCEReporterDisabler 关闭AppleMCERReport](https://github.com/AMD-OSX/AMD_Vanilla/raw/master/Extra/AppleMCEReporterDisabler.kext.zip)
  - [[扩展] LucyRTL8125Ethernet 2.5G有线网卡驱动](https://github.com/Mieze/LucyRTL8125Ethernet)
- - [[扩展] itlwm Intel AX200 无线网卡驱动](https://github.com/OpenIntelWireless/itlwm)
- - [[扩展] IntelBluetoothFirmware Intel 蓝牙驱动](https://github.com/OpenIntelWireless/IntelBluetoothFirmware)
  - [[扩展] AMDRyzenCPUPowerManagement](https://github.com/trulyspinach/SMCAMDProcessor)
  - [[扩展] SMCAMDProcessor](https://github.com/trulyspinach/SMCAMDProcessor)
  - [[扩展] NVMeFix](https://github.com/acidanthera/NVMeFix)

@@ -1,4 +1,4 @@
-# AMD Ryzen Hackintosh - Opencore EFI for Asus TUF Gaming B550M-Plus (WI-FI)
+# AMD Ryzen Hackintosh - Opencore EFI for Asus TUF Gaming B550M-Plus
 
 [**English**](README_en.md)| [**中文**](README.md)
 
@@ -6,12 +6,12 @@
 | **Component** | **Model** |
 | ------------- | --------- |
 | CPU | AMD Ryzen 5 5600X @ 3.6GHz OC|
-| Motherboard | Asus TUF Gaming B550M-Plus (WI-FI) |
+| Motherboard | Asus TUF Gaming B550M-Plus |
 | RAM | Crucial  DDR4 16GB (2 x 8GB) @3600(OC3800)|
 | Audio Chipset | ALCS-1200A |
 | GPU | DATALAND  RX 5500XT 8G |
 | Ethernet | RTL8125 2.5GbE |
-| WiFi & Bluetooth | Intel WiFi 6 AX200 |
+| WiFi & Bluetooth | Broadcom BMC94360CD |
 | OPOWER SUPPLY) | PHANTEKS  Revolt PRO 850W |
 | OS Disk (SATA) | HP S700 128G |
 
@@ -48,8 +48,6 @@
  - [[Kext] AppleALC 声卡驱动](https://github.com/acidanthera/AppleALC)
  - [[Kext] AppleMCEReporterDisabler 关闭AppleMCERReport](https://github.com/AMD-OSX/AMD_Vanilla/raw/master/Extra/AppleMCEReporterDisabler.kext.zip)
  - [[Kext] LucyRTL8125Ethernet 2.5G有线网卡驱动](https://github.com/Mieze/LucyRTL8125Ethernet)
- - [[Kext] itlwm Intel AX200 无线网卡驱动](https://github.com/OpenIntelWireless/itlwm)
- - [[Kext] IntelBluetoothFirmware Intel 蓝牙驱动](https://github.com/OpenIntelWireless/IntelBluetoothFirmware)
  - [[Kext] AMDRyzenCPUPowerManagement](https://github.com/trulyspinach/SMCAMDProcessor)
  - [[Kext] SMCAMDProcessor](https://github.com/trulyspinach/SMCAMDProcessor)
  - [[Kext] NVMeFix](https://github.com/acidanthera/NVMeFix)

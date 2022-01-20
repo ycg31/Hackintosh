@@ -50,146 +50,93 @@
 				<data>DgAAAA==</data>
 				<key>ports</key>
 				<dict>
-					<key>HS11</key>
+					<key>POT1</key>
 					<dict>
+						<key>Comment</key>
+						<string>Rear USB 3.2 Type A，2.0 personality with POT5 No7</string>
 						<key>UsbConnector</key>
 						<integer>3</integer>
 						<key>name</key>
-						<string>HS11</string>
+						<string>POT1</string>
 						<key>port</key>
 						<data>AQAAAA==</data>
-						<key>Comment</key>
-						<string>Rear USB 3.2 Type A，2.0 personality</string>
 					</dict>
-					<key>HS12</key>
+					<key>POT2</key>
 					<dict>
+						<key>Comment</key>
+						<string>Rear USB 3.2 Type C，2.0 personality with POT6 No8</string>
 						<key>UsbConnector</key>
 						<integer>9</integer>
 						<key>name</key>
-						<string>HS12</string>
+						<string>POT2</string>
 						<key>port</key>
 						<data>AgAAAA==</data>
-						<key>Comment</key>
-						<string>Rear USB 3.2 Type C，2.0 personality</string>
-					</dict>
-					<key>HS14</key>
-					<dict>
-						<key>UsbConnector</key>
-						<integer>3</integer>
-						<key>name</key>
-						<string>HS14</string>
-						<key>port</key>
-						<data>BAAAAA==</data>
-						<key>Comment</key>
-						<string>Front USB 3.2 Type A，2.0 personality</string>
-					</dict>
-					<key>PO10</key>
-					<dict>
-						<key>UsbConnector</key>
-						<integer>255</integer>
-						<key>name</key>
-						<string>PO10</string>
-						<key>port</key>
-						<data>CgAAAA==</data>
-						<key>Comment</key>
-						<string>Internal asus led</string>
-					</dict>
-					<key>PO12</key>
-					<dict>
-						<key>UsbConnector</key>
-						<integer>0</integer>
-						<key>name</key>
-						<string>PO12</string>
-						<key>port</key>
-						<data>DAAAAA==</data>
-						<key>Comment</key>
-						<string>Rear USB 2.0 Type A</string>
-					</dict>
-					<key>PO13</key>
-					<dict>
-						<key>UsbConnector</key>
-						<integer>0</integer>
-						<key>name</key>
-						<string>PO13</string>
-						<key>port</key>
-						<data>DQAAAA==</data>
-						<key>Comment</key>
-						<string>Rear USB 2.0 Type A</string>
-					</dict>
-					<key>PO14</key>
-					<dict>
-						<key>UsbConnector</key>
-						<integer>255</integer>
-						<key>name</key>
-						<string>PO14</string>
-						<key>port</key>
-						<data>DgAAAA==</data>
 					</dict>
 					<key>POT3</key>
 					<dict>
+						<key>Comment</key>
+						<string>Front USB 3.2 Type A，2.0 personality with POT7 L No9</string>
 						<key>UsbConnector</key>
 						<integer>3</integer>
 						<key>name</key>
 						<string>POT3</string>
 						<key>port</key>
 						<data>AwAAAA==</data>
-						<key>Comment</key>
-						<string>Front USB 3.2 Type A，2.0 personality</string>
 					</dict>
-					<key>POT5</key>
+					<key>POT4</key>
 					<dict>
-						<key>UsbConnector</key>
-						<integer>0</integer>
-						<key>name</key>
-						<string>POT5</string>
-						<key>port</key>
-						<data>BQAAAA==</data>
 						<key>Comment</key>
-						<string>Rear USB 2.0 Type A ，with HS11</string>
-					</dict>
-					<key>POT6</key>
-					<dict>
+						<string>Front USB 3.2 Type A，2.0 personality with POT8  R No10</string>
 						<key>UsbConnector</key>
-						<integer>9</integer>
+						<integer>3</integer>
 						<key>name</key>
-						<string>POT6</string>
+						<string>POT4</string>
 						<key>port</key>
-						<data>BgAAAA==</data>
-						<key>Comment</key>
-						<string>Rear USB 2.0 Type C， with HS12</string>
+						<data>BAAAAA==</data>
 					</dict>
 					<key>POT7</key>
 					<dict>
+						<key>Comment</key>
+						<string>Front USB 2.0 Type A，with POT3 No9</string>
 						<key>UsbConnector</key>
 						<integer>0</integer>
 						<key>name</key>
 						<string>POT7</string>
 						<key>port</key>
 						<data>BwAAAA==</data>
-						<key>Comment</key>
-						<string>Front USB 2.0 Type A，with POT3</string>
 					</dict>
 					<key>POT8</key>
 					<dict>
+						<key>Comment</key>
+						<string>Front USB 2.0 Type A，with POT4 No10</string>
 						<key>UsbConnector</key>
 						<integer>0</integer>
 						<key>name</key>
 						<string>POT8</string>
 						<key>port</key>
 						<data>CAAAAA==</data>
-						<key>Comment</key>
-						<string>Front USB 2.0 Type A，with HS14</string>
 					</dict>
-					<key>POT9</key>
+					<key>PO10</key>
 					<dict>
+						<key>Comment</key>
+						<string>Internal asus led</string>
 						<key>UsbConnector</key>
 						<integer>255</integer>
 						<key>name</key>
-						<string>POT9</string>
+						<string>PO10</string>
 						<key>port</key>
-						<data>CQAAAA==</data>
+						<data>CgAAAA==</data>
+					</dict>
+					<key>PO11</key>
+					<dict>
 						<key>Comment</key>
-						<string>Internal Bluetooth</string>
+						<string>USB Bluetooth</string>
+						<key>UsbConnector</key>
+						<integer>255</integer>
+						<key>name</key>
+						<string>PO11</string>
+						<key>port</key>
+						<data>CwAAAA==</data>
 					</dict>
 				</dict>
 			</dict>
@@ -226,91 +173,80 @@
 				<dict>
 					<key>PRT1</key>
 					<dict>
+						<key>Comment</key>
+						<string>Rear USB 2.0 Type A，with PRT5 No3</string>
 						<key>UsbConnector</key>
 						<integer>0</integer>
 						<key>name</key>
 						<string>PRT1</string>
 						<key>port</key>
 						<data>AQAAAA==</data>
-						<key>Comment</key>
-						<string>Rear USB 2.0 Type A，with PRT5</string>
 					</dict>
 					<key>PRT2</key>
 					<dict>
+						<key>Comment</key>
+						<string>Rear USB 2.0 Type A，with PRT6 No4</string>
 						<key>UsbConnector</key>
 						<integer>0</integer>
 						<key>name</key>
 						<string>PRT2</string>
 						<key>port</key>
 						<data>AgAAAA==</data>
-						<key>Comment</key>
-						<string>Rear USB 2.0 Type A，with PRT6</string>
 					</dict>
 					<key>PRT3</key>
 					<dict>
+						<key>Comment</key>
+						<string>Rear USB 2.0 Type A，with PRT7 No5</string>
 						<key>UsbConnector</key>
 						<integer>0</integer>
 						<key>name</key>
 						<string>PRT3</string>
 						<key>port</key>
 						<data>AwAAAA==</data>
-						<key>Comment</key>
-						<string>Rear USB 2.0 Type A，with PRT7</string>
-					</dict>
-					<key>PRT4</key>
-					<dict>
-						<key>UsbConnector</key>
-						<integer>0</integer>
-						<key>name</key>
-						<string>PRT4</string>
-						<key>port</key>
-						<data>BAAAAA==</data>
-						<key>Comment</key>
-						<string>Rear USB 2.0 Type A，with PRT8</string>
 					</dict>
 					<key>PRT5</key>
 					<dict>
+						<key>Comment</key>
+						<string>Rear USB 3.2 Type A，2.0 personality with PRT1 No3</string>
 						<key>UsbConnector</key>
 						<integer>3</integer>
 						<key>name</key>
 						<string>PRT5</string>
 						<key>port</key>
 						<data>BQAAAA==</data>
-						<key>Comment</key>
-						<string>Rear USB 3.2 Type A，2.0 personality</string>
 					</dict>
 					<key>PRT6</key>
 					<dict>
+						<key>Comment</key>
+						<string>Rear USB 3.2 Type A，2.0 personality with PRT2 No4</string>
 						<key>UsbConnector</key>
 						<integer>3</integer>
 						<key>name</key>
 						<string>PRT6</string>
 						<key>port</key>
 						<data>BgAAAA==</data>
-						<key>Comment</key>
-						<string>Rear USB 3.2 Type A，2.0 personality</string>
 					</dict>
 					<key>PRT7</key>
 					<dict>
+						<key>Comment</key>
+						<string>Rear USB 3.2 Type A，2.0 personality with PRT3 No5</string>
 						<key>UsbConnector</key>
 						<integer>3</integer>
 						<key>name</key>
 						<string>PRT7</string>
 						<key>port</key>
 						<data>BwAAAA==</data>
-						<key>Comment</key>
-						<string>Rear USB 3.2 Type A，2.0 personality</string>
 					</dict>
 					<key>PRT8</key>
 					<dict>
+						<key>Comment</key>
+						<string>Rear USB 3.2 Type A，2.0 personality with PRT4 No6</string>
 						<key>UsbConnector</key>
 						<integer>3</integer>
 						<key>name</key>
 						<string>PRT8</string>
 						<key>port</key>
 						<data>CAAAAA==</data>
-						<key>Comment</key>
-						<string>Rear USB 3.2 Type A，2.0 personality</string>
 					</dict>
 				</dict>
 			</dict>
