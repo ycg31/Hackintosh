@@ -62,7 +62,6 @@
  - [[扩展] RestrictEvents](https://github.com/acidanthera/RestrictEvents)
  - [[扩展] Innie](https://github.com/cdf/Innie/releases)
  - [[SSDT] EC-USBX-DESKTOP](https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-EC-USBX-DESKTOP.aml)
- - [[SSDT] SLEEP-PTXH](./OC/ACPI/SSDT-SLEEP-PTXH.aml)
  - [[工具] GenSMBIOS](https://github.com/corpnewt/GenSMBIOS)
  - [[工具] OpenCore在线编辑器](https://galada.gitee.io/opencoreconfiguratoronline/)
  - [[工具] PlistEdit Pro（Mac）](https://www.macwk.com/soft/plistedit)
