@@ -37,7 +37,7 @@
 ## 更新日志
   1. 系统版本升级到12.1
   2. 更换并适配了opencore主题
-  3. 修复蓝牙问题导致启动在ALUC卡住启动慢的问题。
+  3. 主板更换为不带WIFI版本，加装BMC94360CD免驱卡。
   4. 修复HP SSD未开启Trim 系统卡顿的问题。
  
 
@@ -63,7 +63,14 @@
  - [[扩展] Innie](https://github.com/cdf/Innie/releases)
  - [[SSDT] EC-USBX-DESKTOP](https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-EC-USBX-DESKTOP.aml)
  - [[SSDT] SLEEP-PTXH](./OC/ACPI/SSDT-SLEEP-PTXH.aml)
-
+ - [[工具] GenSMBIOS](https://github.com/corpnewt/GenSMBIOS)
+ - [[工具] OpenCore在线编辑器](https://galada.gitee.io/opencoreconfiguratoronline/)
+ - [[工具] PlistEdit Pro（Mac）](https://www.macwk.com/soft/plistedit)
+ - [[工具] Hackintool](https://github.com/headkaze/Hackintool)
+ - [[工具] OpenCore Configurator（Mac）](https://www.macwk.com/soft/opencore-configurator)
+ - [[工具] gibmacOS](https://github.com/corpnewt/gibMacOS)
+ - [[工具] MaciASL](https://github.com/acidanthera/MaciASL)
+ - [[工具] OCConfigCompare](https://github.com/corpnewt/OCConfigCompare)
 
 
 ## 如何使用

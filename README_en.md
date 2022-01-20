@@ -55,7 +55,14 @@
  - [[Kext] Innie](https://github.com/cdf/Innie/releases)
  - [[SSDT] EC-USBX-DESKTOP](https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-EC-USBX-DESKTOP.aml)
  - [[SSDT] SLEEP-PTXH](./OC/ACPI/SSDT-SLEEP-PTXH.aml)
-
+ - [[Tool] GenSMBIOS](https://github.com/corpnewt/GenSMBIOS)
+ - [[Tool] OpencoreConfiguratoronline](https://galada.gitee.io/opencoreconfiguratoronline/)
+ - [[Tool] PlistEdit Pro（Mac）](https://www.macwk.com/soft/plistedit)
+ - [[Tool] Hackintool](https://github.com/headkaze/Hackintool)
+ - [[Tool] OpenCore Configurator（Mac）](https://www.macwk.com/soft/opencore-configurator)
+ - [[Tool] gibmacOS](https://github.com/corpnewt/gibMacOS)
+ - [[Tool] MaciASL](https://github.com/acidanthera/MaciASL)
+ - [[Tool] OCConfigCompare](https://github.com/corpnewt/OCConfigCompare)
 
 
 ## How to use
