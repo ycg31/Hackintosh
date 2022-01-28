@@ -80,7 +80,7 @@ sudo chown -R ubuntu:ubuntu *     #将当前目录下所有文件及目录所有
 
 ### **修正节点**
 
-![img](https://www.ycg31.top:8001/wp-content/uploads/2022/01/2022-01-24_23-26-53-1024x472.png)
+![img](image/2022-01-24_23-26-53-1024x472.png)
 
 ```
 Node ID：即节点ID，不需要更改
@@ -108,7 +108,7 @@ EAPD：EAPD放大器（不要修改）
 
 ### **导出verbs.txt节点文件**
 
-![img](https://www.ycg31.top:8001/wp-content/uploads/2022/01/2022-01-24_23-09-27.png)
+![img](image/2022-01-24_23-09-27.png)
 
 ```
 Verbs from File: "Codec.txt"
@@ -155,7 +155,7 @@ NID       PinDefault     Device             Connector           Port            
 
 > 生成一个名为Codec.txt.svg的文件，可以使用浏览器或者专门的流程图app打开，比如Skecth
 
-![img](https://www.ycg31.top:8001/wp-content/uploads/2022/01/image-1024x718.png)
+![img](image/image-1024x718.png)
 
 ### **根据pathmap图**整理路径
 
@@ -182,9 +182,9 @@ NID       PinDefault     Device             Connector           Port            
 
 删除`/AppleALC/Resources`中多余文件夹，只留下你的声卡型号文件夹、`Pinconfigs.kext`以及四个`plist`文件，我的声卡是ALCS1200A，如下图
 
-![img](https://www.ycg31.top:8001/wp-content/uploads/2022/01/2022-01-25_00-12-31-1024x432.png)
+![img](image/2022-01-25_00-12-31-1024x432.png)
 
-![img](https://www.ycg31.top:8001/wp-content/uploads/2022/01/2022-01-25_00-13-24-1024x403.png)
+![img](image/2022-01-25_00-13-24-1024x403.png)
 
 依次编辑
 
@@ -199,7 +199,7 @@ NID       PinDefault     Device             Connector           Port            
 
 ### 编辑`/AppleALC/Resources/PinConfigs.kext/Contents`/`Info.plist`
 
-![img](https://www.ycg31.top:8001/wp-content/uploads/2022/01/2022-01-25_00-18-58-1024x810.png)
+![img](image/2022-01-25_00-18-58-1024x810.png)
 
 CodecID 填写前面获取的DevID: 283904768
 
@@ -211,21 +211,21 @@ WakeConfigData填EAPD节点+70C02，比如我有两个带EAPD的节点，分别�
 
 ### 编辑`/AppleALC/Resources/ALCS1200A/Info.plist`
 
-![img](https://www.ycg31.top:8001/wp-content/uploads/2022/01/2022-01-25_00-16-58-1024x729.png)
+![img](image/2022-01-25_00-16-58-1024x729.png)
 
 id和path对应你的文件名和id填写即可。这里就是关联路径，告诉驱动去layout31.xml去找布局，去Platforms31.xml去找平台。
 
 ### 编辑`layout31.xml`
 
-![img](https://www.ycg31.top:8001/wp-content/uploads/2022/01/2022-01-25_00-31-27-1024x1021.png)
+![img](image/2022-01-25_00-31-27-1024x1021.png)
 
 就这3个地方要改，前面两个都知道咋个改了，PathMapID数字自己随便填，跟Platforms31.xml中的对应即可。
 
 ### 编辑`Platforms31.xml`
 
-![img](https://www.ycg31.top:8001/wp-content/uploads/2022/01/2022-01-25_00-32-38-1024x1021.png)
+![img](image/2022-01-25_00-32-38-1024x1021.png)
 
-![img](https://www.ycg31.top:8001/wp-content/uploads/2022/01/2022-01-25_00-47-48-1024x889.png)
+![img](image/2022-01-25_00-47-48-1024x889.png)
 
 | 第一级序号 | **第二级序号** | 设备名称     | 节点 | 路径                   |
 | :--------: | :------------: | ------------ | :--: | ---------------------- |
