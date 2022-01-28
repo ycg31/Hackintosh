@@ -15,9 +15,9 @@
 | 电源 | 追风者 Revolt PRO 850W |
 | 系统硬盘 | 惠普 S700 128G |
 
-**macOS 版本**: 12.1  (21C52) 
+**macOS 版本**: 12.2  (21D49) 
 
-**OpenCore 版本**: 0.7.6
+**OpenCore 版本**: 0.7.7
 
 **机型**:  iMacPro1,1
 
@@ -35,6 +35,11 @@
 
  
 ## 更新日志
+- 2021-01-28
+  1. 系统版本升级到12.2
+  2. OpenCore更新到0.7.7
+  3. 定制并自编译AppleALC，记录[定制过程](用AppleALC定制声卡记录.md)。
+- 2021-01-20
   1. 系统版本升级到12.1
   2. 更换并适配了opencore主题
   3. 主板更换为不带WIFI版本，加装BMC94360CD免驱卡。
@@ -89,7 +94,7 @@
   3. kernel > Patch 中 algrey - Force cpuid_cores_per_package 是否已经按CPU核心数进行更改,具体方法见[AMD_Vanilla
 ](https://github.com/AMD-OSX/AMD_Vanilla).
   
-**你不能直接使用本库中的SMBIOS信息,必须自己生成并保持唯一。**
+**本库中的SMBIOS信息已删除,必须自己生成添加并保持唯一。[生成工具](https://github.com/corpnewt/GenSMBIOS)**
 
 ## BIOS设置
 
