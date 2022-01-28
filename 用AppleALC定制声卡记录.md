@@ -76,7 +76,7 @@ sudo chown -R ubuntu:ubuntu *     #将当前目录下所有文件及目录所有
 
 ### **打开PinConfigurator，导入刚才获取的codec.txt**
 
-![img](https://www.ycg31.top:8001/wp-content/uploads/2022/01/2022-01-24_23-03-27-1024x472.png)
+![img](image/2022/01/2022-01-24_23-03-27-1024x472.png)
 
 ### **修正节点**
 
