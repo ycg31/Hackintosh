@@ -15,9 +15,9 @@
 | 电源 | 追风者 Revolt PRO 850W |
 | 系统硬盘 | 惠普 S700 128G |
 
-**macOS 版本**: 12.2  (21D49) 
+**macOS 版本**: 13.2  (22D49) 
 
-**OpenCore 版本**: 0.7.7
+**OpenCore 版本**: 0.8.8
 
 **机型**:  iMacPro1,1
 
@@ -33,10 +33,19 @@
  - [虚拟化](#虚拟化)
  - [安装向导](#安装向导)
 
- 
+
 ## 更新日志
+- 2023-02-10
+  1. 系统版本升级到 Ventura 13.2
+  2. OpenCore更新到0.8.8
+  3. 更新Liu到1.6.3
+  4. 更新RTCMemoryFixup到1.0.7
+  5. 更新RestrictEvents到1.0.9
+  6. 更新VirtualSMC到1.3.0
+  7. 更新WhateverGreen到1.6.3
+  8. 更新**[AMD_Vanilla](https://github.com/AMD-OSX/AMD_Vanilla)**补丁为2023.02.05最新补丁
 - 2021-01-28
-  1. 系统版本升级到12.2
+  1. 系统版本升级到 Monetery 12.2
   2. OpenCore更新到0.7.7
   3. 定制并自编译AppleALC，记录[定制过程](用AppleALC定制声卡记录.md)。
 - 2021-01-20
@@ -44,7 +53,7 @@
   2. 更换并适配了opencore主题
   3. 主板更换为不带WIFI版本，加装BMC94360CD免驱卡。
   4. 修复HP SSD未开启Trim 系统卡顿的问题。
- 
+
 
 ## 驱动和扩展
  - [[引导] OpenCore](https://github.com/acidanthera/OpenCorePkg)
@@ -93,7 +102,7 @@
   2. Misc -> Security -> SecureBootModel是否为Disabled
   3. kernel > Patch 中 algrey - Force cpuid_cores_per_package 是否已经按CPU核心数进行更改,具体方法见[AMD_Vanilla
 ](https://github.com/AMD-OSX/AMD_Vanilla).
-  
+
 **本库中的SMBIOS信息已删除,必须自己生成添加并保持唯一。[生成工具](https://github.com/corpnewt/GenSMBIOS)**
 
 ## BIOS设置
@@ -111,8 +120,7 @@
 | Parallel Port | 关闭 |
 | TPM Device | 关闭 <sup>2</sup>|
 
-
-<sup>1</sup> 这里如果开启的话,**必须**在config.plist配置文件的`boot-args`项中删除  `npci=0x2000`,不过推荐主板关闭,使用参数
+<sup>1</sup> 这里如果开启的话,**必须**在config.plist配置文件的`boot-args`项中删除  `npci=0x2000`启动参数,不过推荐主板关闭,使用参数
 
 <sup>2</sup> TPM安装阶段关闭,安装完成后可以开启,特别是win11双系统的话,不开启无法启动win11
 

@@ -15,13 +15,14 @@
 | OPOWER SUPPLY) | PHANTEKS  Revolt PRO 850W |
 | OS Disk (SATA) | HP S700 128G |
 
-**macOS version**: 12.2  (21D49) 
+**macOS version**: 13.2  (22D49) 
 
-**OpenCore version**: 0.7.7
+**OpenCore version**: 0.8.8
 
 **SMBIOS**:  iMacPro1,1
 
 ## Table of content
+ - [Update log](#Update-log)
  - [Drivers & Kexts](#Drivers-and-Kexts)
  - [How to use](#How-to-use)
  - [BIOS Settings](#BIOS-Settings)
@@ -32,8 +33,29 @@
  - [Virtualization](#Virtualization)
  - [Guides](#Guides)
 
- 
+## Update log
+
+- 2023-02-10
+  1. System version upgrade to Ventura 13.2
+  2.  Updated OpenCore to 0.8.8
+  3.  Update Liu.kext  to 1.6.3
+  4.  Update RTCMemoryFixup.kext to 1.0.7
+  5.  Update RestrictEvents.kext  to 1.0.9
+  6.  Update VirtualSMC.kext to 1.3.0
+  7.  Update WhateverGreen.kext to 1.6.3
+  8.  Update **[AMD_Vanilla patch](https://github.com/AMD-OSX/AMD_Vanilla)** to the latest 2023.02.05
+- 2021-01-28
+  1. System version upgraded to Monetery 12.2
+  2.  Updated OpenCore to 0.7.7
+  3. Customize and self-compile AppleALC, and record the [customization process](用AppleALC定制声卡记录.md).
+- 2021-01-20
+  1. The system version is upgraded to 12.1
+  2. Replaced and adapted the opencore theme.
+  3. The motherboard is replaced with a version without WIFI, and a BMC94360CD free drive card is installed.
+  4. Fixed the system freeze problem when HP SSD did not enable Trim.
+
 ## Drivers and Kexts
+
  - [[Bootloader] OpenCore](https://github.com/acidanthera/OpenCorePkg)
  - [[Resources] Picker GUI](https://github.com/acidanthera/OcBinaryData/tree/master/Resources)
  - [[Patch] AMD_Vanilla](https://github.com/AMD-OSX/AMD_Vanilla)
@@ -45,9 +67,9 @@
  - [[Kext] Lilu](https://github.com/acidanthera/Lilu)
  - [[Kext] VirtualSMC](https://github.com/acidanthera/VirtualSMC)
  - [[Kext] WhateverGreen](https://github.com/acidanthera/WhateverGreen)
- - [[Kext] AppleALC 声卡驱动](https://github.com/acidanthera/AppleALC)
- - [[Kext] AppleMCEReporterDisabler 关闭AppleMCERReport](https://github.com/AMD-OSX/AMD_Vanilla/raw/master/Extra/AppleMCEReporterDisabler.kext.zip)
- - [[Kext] LucyRTL8125Ethernet 2.5G有线网卡驱动](https://github.com/Mieze/LucyRTL8125Ethernet)
+ - [[Kext] AppleALC ](https://github.com/acidanthera/AppleALC)
+ - [[Kext] AppleMCEReporterDisabler ](https://github.com/AMD-OSX/AMD_Vanilla/raw/master/Extra/AppleMCEReporterDisabler.kext.zip)
+ - [[Kext] LucyRTL8125Ethernet ](https://github.com/Mieze/LucyRTL8125Ethernet)
  - [[Kext] AMDRyzenCPUPowerManagement](https://github.com/trulyspinach/SMCAMDProcessor)
  - [[Kext] SMCAMDProcessor](https://github.com/trulyspinach/SMCAMDProcessor)
  - [[Kext] NVMeFix](https://github.com/acidanthera/NVMeFix)
@@ -185,4 +207,4 @@ If [**Coherence Mode**](https://www.parallels.com/blogs/how-to-use-coherence-mod
 
 
 
- 
+
