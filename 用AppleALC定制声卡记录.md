@@ -250,7 +250,7 @@ id和path对应你的文件名和id填写即可。这里就是关联路径，告
 
 项目文件夹结构如下图所示:
 
-![image](image/2023-02-11 00.50.04.png)
+![img](image/2023-02-11 00.50.04.png)
 
 3.在 Xcode 的项目配置中**添加用户定义的设置**，添加`KERNEL_EXTENSION_HEADER_SEARCH_PATHS`和`KERNEL_FRAMEWORK_HEADERS`值。
 
@@ -265,7 +265,7 @@ KERNEL_FRAMEWORK_HEADERS = $(PROJECT_DIR)/MacKernelSDK/Headers
 
 5.选中applealc点右侧的export，在出现的对话框中点save built products ->next，保存即可
 
-![image](image/2023-02-11 01.27.39.png)
+![img](image/2023-02-11 01.27.39.png)
 
 # 测试
 
