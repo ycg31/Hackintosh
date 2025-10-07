@@ -7,7 +7,7 @@
 | ------------- | --------- |
 | CPU | AMD Ryzen 5 5600X @ 3.6GHz OC|
 | Motherboard | Asus TUF Gaming B550M-Plus |
-| RAM | Crucial  DDR4 16GB (2 x 8GB) @3600(OC3800)|
+| RAM | Crucial  DDR4 32GB (4 x 8GB) @3600(OC3800)|
 | Audio Chipset | ALCS-1200A |
 | GPU | DATALAND  RX 5500XT 8G |
 | Ethernet | RTL8125 2.5GbE |
@@ -17,7 +17,7 @@
 
 **macOS version**: 13.2  (22D49) 
 
-**OpenCore version**: 0.8.8
+**OpenCore version**: 1.0.5
 
 **SMBIOS**:  iMacPro1,1
 
@@ -35,6 +35,14 @@
 
 ## Update log
 
+- 2025-10-07
+  1. Updated AppleALC to 1.9.5 and recompiled to fix the microphone mute issue.
+  2. Updated OpenCore to 1.0.5
+  3. Updated Liu to 1.7.1
+  4. Updated LucyRTL8125Ethernet to 1.2.2
+  5. Updated RestrictEvents to 1.1.6
+  6. Updated VirtualSMC to 1.3.7
+  7. Updated WhateverGreen to 1.7.0
 - 2023-02-10
   1. System version upgrade to Ventura 13.2
   2.  Updated OpenCore to 0.8.8

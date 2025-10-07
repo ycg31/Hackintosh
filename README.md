@@ -6,8 +6,8 @@
 | **组件** | **型号** |
 | ------------- | --------- |
 | CPU | AMD 锐龙5 5600X @ 3.6GHz OC|
-| 主版 | 华硕 电竞特工 TUF Gaming B550M-Plus |
-| 内存 | 英睿达 DDR4 16GB (2 x 8GB) @3600(OC3800)|
+| 主版 | 华硕 电竞特工 TUF B550M Gaming Plus |
+| 内存 | 英睿达 DDR4 32GB (4 x 8GB) @3600(OC3800)|
 | 声卡 | 瑞昱 ALCS-1200A |
 | 显卡 | 迪兰恒进 RX 5500XT 8G |
 | 网卡 | 瑞昱 RTL8125 2.5GbE |
@@ -17,7 +17,7 @@
 
 **macOS 版本**: 13.2  (22D49) 
 
-**OpenCore 版本**: 0.8.8
+**OpenCore 版本**: 1.0.5
 
 **机型**:  iMacPro1,1
 
@@ -35,6 +35,14 @@
 
 
 ## 更新日志
+- 2025-10-7
+  1. 更新AppleALC到1.9.5并重新编译，修复麦克风无声的问题
+  2. OpenCore更新到1.0.5
+  3. 更新Liu到1.7.1
+  4. 更新LucyRTL8125Ethernet到1.2.2
+  5. 更新RestrictEvents到1.1.6
+  6. 更新VirtualSMC到1.3.7
+  7. 更新WhateverGreen到1.7.0
 - 2023-02-10
   1. 系统版本升级到 Ventura 13.2
   2. OpenCore更新到0.8.8

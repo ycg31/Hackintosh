@@ -94,6 +94,28 @@
 						<key>port</key>
 						<data>BAAAAA==</data>
 					</dict>
+					<key>POT5</key>
+					<dict>
+						<key>Comment</key>
+						<string>Rear USB 2.0 Type A ，with POT1 No7</string>
+						<key>UsbConnector</key>
+						<integer>0</integer>
+						<key>name</key>
+						<string>POT5</string>
+						<key>port</key>
+						<data>BQAAAA==</data>
+					</dict>
+					<key>POT6</key>
+					<dict>
+						<key>Comment</key>
+						<string>Rear USB 2.0 Type C， with POT2 No8</string>
+						<key>UsbConnector</key>
+						<integer>9</integer>
+						<key>name</key>
+						<string>POT6</string>
+						<key>port</key>
+						<data>BgAAAA==</data>
+					</dict>
 					<key>POT7</key>
 					<dict>
 						<key>Comment</key>
@@ -116,6 +138,17 @@
 						<key>port</key>
 						<data>CAAAAA==</data>
 					</dict>
+					<key>POT9</key>
+					<dict>
+						<key>Comment</key>
+						<string>Internal Bluetooth</string>
+						<key>UsbConnector</key>
+						<integer>255</integer>
+						<key>name</key>
+						<string>POT9</string>
+						<key>port</key>
+						<data>CQAAAA==</data>
+					</dict>
 					<key>PO10</key>
 					<dict>
 						<key>Comment</key>
@@ -137,6 +170,37 @@
 						<string>PO11</string>
 						<key>port</key>
 						<data>CwAAAA==</data>
+					</dict>
+					<key>PO12</key>
+					<dict>
+						<key>Comment</key>
+						<string>Rear USB 2.0 Type A</string>
+						<key>UsbConnector</key>
+						<integer>0</integer>
+						<key>name</key>
+						<string>PO12</string>
+						<key>port</key>
+						<data>DAAAAA==</data>
+					</dict>
+					<key>PO13</key>
+					<dict>
+						<key>Comment</key>
+						<string>Rear USB 2.0 Type A</string>
+						<key>UsbConnector</key>
+						<integer>0</integer>
+						<key>name</key>
+						<string>PO13</string>
+						<key>port</key>
+						<data>DQAAAA==</data>
+					</dict>
+					<key>PO14</key>
+					<dict>
+						<key>UsbConnector</key>
+						<integer>255</integer>
+						<key>name</key>
+						<string>PO14</string>
+						<key>port</key>
+						<data>DgAAAA==</data>
 					</dict>
 				</dict>
 			</dict>
@@ -203,6 +267,17 @@
 						<string>PRT3</string>
 						<key>port</key>
 						<data>AwAAAA==</data>
+					</dict>
+					<key>PRT4</key>
+					<dict>
+						<key>Comment</key>
+						<string>Rear USB 2.0 Type A，with PRT8 No6</string>
+						<key>UsbConnector</key>
+						<integer>0</integer>
+						<key>name</key>
+						<string>PRT4</string>
+						<key>port</key>
+						<data>BAAAAA==</data>
 					</dict>
 					<key>PRT5</key>
 					<dict>
